@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list >
+  <li *ngFor = "let p of pokemon">
+    <ion-item *ngIf = pokemon>
+        <ion-avatar item-start>
+          <img src="{{p.sprites.front_default}}">
+        </ion-avatar>
+        <h2>{{p.name}}</h2>
+    </ion-item>
+  </li>
+  </ion-list>
+
+  <button (click)="getPokemon()" ion-button> Get Novo Pokemon </button>
+
+</ion-content>
